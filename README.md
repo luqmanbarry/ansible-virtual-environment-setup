@@ -1,0 +1,20 @@
+# Ansible Virtual Environment Setup
+
+This script can be used to setup a Python virtual environment for developing with Ansible. It installs Ansible Collections and Python modules within the virtual environment and then launches it.
+
+## Procedure
+
+1. Add the Ansible dependencies such as the `community.general, ansible.posix` collections in the `.env/ansible/requirements.yaml` file
+
+2. Add the Python dependencies such as the `ansible, jsonpath, kubernetes` modules in the `.env/ansible/requirements.txt` file
+
+3. Launch the virtual environment
+   ```sh
+   . .env/launch.sh
+   ```
+
+4. Exit the virtual environment
+   ```sh
+   deactivate || (true && echo "Ansible Virtual Environment not active")
+   ```
+
