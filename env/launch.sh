@@ -4,10 +4,10 @@ ACTION="$1"
 
 if [ "$ACTION" = "-h" ] || [ "$ACTION" = "--help" ];
 then
-  echo "Example Call: . .env/setup.sh"
+  echo "Example Call: . env/launch.sh"
 fi
 
-export ANSIBLE_ENV_DIR="$(pwd)/.ansible-venv"
+export ANSIBLE_ENV_DIR="$(pwd)/.venv"
 
 
 # Validate Inputs are provided
@@ -33,14 +33,14 @@ then
   . ${ANSIBLE_ENV_DIR}/bin/activate || (false && echo 'Failed to enter Ansible Virtual Environment')
 
   echo "=====> Installing python packages..."
-  pip3.11 install -U -r .env/python/requirements.txt
+  pip3.11 install -U -r env/python/requirements.txt
     
   pip3.11 list
 
   ansible --version
 
   echo "######> Installing Ansible collections..."
-  ansible-galaxy collection install -r .env/ansible/requirements.yaml
+  ansible-galaxy collection install -r env/ansible/requirements.yaml
   
 
 fi
