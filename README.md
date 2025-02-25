@@ -21,9 +21,9 @@ This script can be used to setup a Python virtual environment for developing wit
    ```sh
    deactivate || (true && echo "Ansible Virtual Environment not active")
    ```
-5. Refresh the virtual environment. 
+5. Refresh the virtual environment
    
-   For example, environment environment as a result of new package or collection being added in the `requirement.{txt,yaml}` file.
+   For example, environment reload as a result of new package or collection being added in the `requirement.{txt,yaml}` file.
    ```sh
    deactivate || (true && echo "Ansible Virtual Environment not active")
    rm -rf .ansible-venv
