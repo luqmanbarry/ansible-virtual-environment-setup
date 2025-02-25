@@ -17,11 +17,7 @@ This script can be used to setup a Python virtual environment for developing wit
    . .env/launch.sh
    ```
 
-4. Exit the virtual environment
-   ```sh
-   deactivate || (true && echo "Ansible Virtual Environment not active")
-   ```
-5. Refresh the virtual environment
+4. Refresh the virtual environment
    
    For example, environment reload as a result of new package or collection being added in the `requirement.{txt,yaml}` file.
    ```sh
@@ -30,3 +26,7 @@ This script can be used to setup a Python virtual environment for developing wit
    . .env/launch.sh
    ```
 
+5. Exit the virtual environment
+   ```sh
+   deactivate || (true && echo "Ansible Virtual Environment not active")
+   ```
